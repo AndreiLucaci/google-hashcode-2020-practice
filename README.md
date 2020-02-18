@@ -24,13 +24,14 @@ Each input data set is provided in a plain text le containing exclusively ASCII
 characters with lines terminated with a single '\n' character (UNIX- style line endings).
 When a single line contains multiple elements, they are separated by single spaces.
 The rst line of the data set contains the following data:
-● an integer **_M_** ( _1 ≤_ **_M_** _≤ 10_^9 ) – the maximum number of pizza slices to order
-● an integer **_N_** ( _1 ≤_ **_N_** _≤ 10_^5 ) – the number of dierent types of pizza
 
+- an integer **_M_** ( _1 ≤_ **_M_** _≤ 10_^9 ) – the maximum number of pizza slices to order
+- an integer **_N_** ( _1 ≤_ **_N_** _≤ 10_^5 ) – the number of dierent types of pizza
 
 The second line contains N integers – the number of slices in each type of pizza, in
 non-decreasing order:
-● 1 _≤_ S 0 _≤_ S 1 _≤_ ... _≤_ S N-1 <= **_M_**^
+
+- 1 _≤_ S 0 _≤_ S 1 _≤_ ... _≤_ S N-1 <= **_M_**^
 
 ### Example
 
@@ -42,6 +43,7 @@ Input file Description
 type 0 has 2 slices, type 1 has 5 , type 2 has 6 , and type 3 has 8 slices
 S 0 (2 slices) S 1 (5 slices) S 2 (6 slices) S 3 (8 slices)
 ```
+
 ## Submissions
 
 ### File format
@@ -54,7 +56,6 @@ types of pizza are numbered from 0 to **_N_** -1 in the order they are listed in
 input).
 The total number of slices in the ordered pizzas must be less than or equal to **_M_**.
 
-
 ### Example
 
 ```
@@ -62,16 +63,15 @@ Submission file Description
 3
 0 2 3
 3 types of pizza
-ordering pizzas: S 0 , S 2 , and S 3
+ordering pizzas: S0, S2, and S3
 ```
+
 ## Scoring
 
 The solution gets 1 point for each slice of pizza ordered.
-For **example** , above we ordered 3 pizzas: **S 0** , **S 2** , and **S 3**. We know that the pizza slices
+For **example** , above we ordered 3 pizzas: **S0**, **S2**, and **S3**. We know that the pizza slices
 in each of these are 2, 6, and 8 respectively.
 So the score is: 2+6+8 = **16 points
 Note that there are multiple data sets representing separate instances of the
 problem. The nal score for your team will be the sum of your best scores for the
 individual data sets.**
-
-
