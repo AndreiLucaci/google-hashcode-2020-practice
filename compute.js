@@ -2,6 +2,12 @@ const fs = require('fs')
 const path = require('path')
 const os = require('os')
 
+const v1 = require('./v1compute')
+const v2 = require('./v2compute')
+const v3 = require('./v3compute')
+
+const compute = v3
+
 module.exports = fileName => {
   const filename = path.join(__dirname, 'input', fileName)
 
@@ -37,25 +43,8 @@ module.exports = fileName => {
 
   const obj = create(l1, l2)
 
-  let tempM = obj.M
-
-  const solution = []
-  const leftovers = []
-  let pizzas = obj.pizzaSizes
-
-  while (tempM > 0) {
-    if (!pizzas.length && !leftovers.length) break
-
-    const pizza = pizzas.pop()
-
-    if (tempM > pizza) {
-      solution.push(pizza)
-    } else {
-      leftovers.push(pizza)
-    }
-
-    tempM -= pizza
-  }
+  // solution part
+  const solution = compute(obj.pizzaSizes, obj.M)
 
   const result = {
     nrOfPizzas: solution.length,
